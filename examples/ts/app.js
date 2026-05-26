@@ -51,6 +51,7 @@ const server = http.createServer(async (req, res) => {
   const parsedURL = new URL(req.url, 'http://localhost');
   const context = {
     method:  req.method,
+    path:    parsedURL.pathname,
     headers: req.headers,
     query:   Object.fromEntries(parsedURL.searchParams),
     log:     buildLogger(req),

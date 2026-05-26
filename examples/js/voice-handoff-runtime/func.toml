@@ -1,0 +1,18 @@
+[edge_compute]
+func_id = "voice-handoff-runtime-js-demo"
+func_name = "voice-handoff-runtime-js"
+
+[env_vars]
+LOOKUP_CUSTOMER_DELAY_MS = "25"
+SERVICE_NAME = "voice-handoff-runtime"
+VERSION = "1.0.0"
+
+# Secrets — add via: telnyx-edge secrets add <name> <value>
+#
+# EDGE_API_KEY
+#   Required bearer token for POST /v1/agent-executions and
+#   GET /v1/agent-executions/{execution_id}.
+#
+# Optional env vars:
+#   LOOKUP_CUSTOMER_FAIL_NUMBERS   CSV list of phone numbers that force a 424
+#   CUSTOMER_FIXTURE_JSON          JSON phone_number -> customer fixture map

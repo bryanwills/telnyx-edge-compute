@@ -1,0 +1,14 @@
+{
+  "name": "voice-handoff-runtime",
+  "version": "1.0.0",
+  "description": "Telnyx Edge Function — reference voice handoff validation surface",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "start:edge": "func start",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

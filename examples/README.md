@@ -64,11 +64,12 @@ Node.js examples for edge computing:
 | Example | Description | Key Features |
 |---------|-------------|--------------|
 | [**Webhook Receiver**](js/webhook-receiver/) | Webhook ingestion with HMAC-SHA256 signature verification | Knative func lifecycle, crypto module, in-memory ring buffer |
+| [**Voice Handoff Runtime**](js/voice-handoff-runtime/) | Reference voice-path execution surface for `POST /v1/agent-executions` | Bearer auth, idempotency replay handling, deadline/tool-failure status |
 | [**MCP Server**](js/mcp-server/) | Telnyx MCP server for AI agents | MCP protocol, streamable HTTP, telnyx-mcp, code execution |
 
 ### 🚀 Quick Start (JS)
 
-Function-module examples (webhook-receiver) use the shared `app.js` wrapper and `make` workflow:
+Function-module examples (webhook-receiver, voice-handoff-runtime) use the shared `app.js` wrapper and `make` workflow:
 
 ```bash
 cd examples/js
@@ -182,6 +183,7 @@ examples/
 
 **API Development** → Start with `restful-api` (Python) for full CRUD patterns  
 **Webhook Processing** → Use `webhook-receiver` (JS or Python) or `call-event-router` (TS) for event dispatch  
+**Voice-path Handoff Validation** → Use `voice-handoff-runtime` (JS) for the reference `POST /v1/agent-executions` and `GET /v1/agent-executions/{execution_id}` surface  
 **Authentication** → Implement `jwt-auth` (Python) patterns for secure APIs  
 **Data Processing** → Build on `data-processor` (Python) for file/batch operations  
 **Data Transformation** → Use `json-transformer` (Python) for format conversions  
@@ -191,9 +193,10 @@ examples/
 ## 📚 Learning Path
 
 1. **Beginner**: Start with `webhook-receiver` (JS) to understand HTTP handling and routing basics
-2. **Intermediate**: Try `restful-api` (Python) for database operations and CRUD patterns
-3. **Advanced (TS)**: Explore `call-event-router` (TS) for type-safe event dispatch patterns
-4. **Advanced (Go)**: Explore `middleware-patterns` (Go) for composable middleware design
+2. **Validation Path**: Use `voice-handoff-runtime` (JS) when you need a narrow, testable Edge surface for the TEL voice handoff contract
+3. **Intermediate**: Try `restful-api` (Python) for database operations and CRUD patterns
+4. **Advanced (TS)**: Explore `call-event-router` (TS) for type-safe event dispatch patterns
+5. **Advanced (Go)**: Explore `middleware-patterns` (Go) for composable middleware design
 
 ## 🔗 Related Documentation
 

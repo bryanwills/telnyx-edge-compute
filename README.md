@@ -77,6 +77,7 @@ Available examples:
 | [`js/mcp-server`](examples/js/mcp-server/) | JavaScript | MCP server (JS variant) |
 | [`ts/call-event-router`](examples/ts/call-event-router/) | TypeScript | Typed webhook event dispatcher |
 | [`js/webhook-receiver`](examples/js/webhook-receiver/) | JavaScript | Webhook ingestion with HMAC verification |
+| [`js/voice-handoff-runtime`](examples/js/voice-handoff-runtime/) | JavaScript | Reference `POST /v1/agent-executions` validation surface |
 | [`go/middleware-patterns`](examples/go/middleware-patterns/) | Go | HTTP middleware stack (logging, auth, CORS) |
 | [`python/restful-api`](examples/python/restful-api/) | Python | Full CRUD API with validation |
 | [`python/jwt-auth`](examples/python/jwt-auth/) | Python | JWT authentication with RBAC |
